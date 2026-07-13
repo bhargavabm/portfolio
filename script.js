@@ -80,46 +80,6 @@ if (
 
 
 // ===========================
-// VISITOR COUNTER
-// ===========================
-
-let visitors =
-localStorage.getItem("portfolioVisitors");
-
-if (!visitors) {
-  visitors = 1;
-} else {
-  visitors = Number(visitors) + 1;
-}
-
-localStorage.setItem(
-  "portfolioVisitors",
-  visitors
-);
-
-const visitorSection =
-document.createElement("div");
-
-visitorSection.innerHTML = `
-<section class="section">
-<h2>Portfolio Visitors</h2>
-
-<div class="rating-box">
-
-<h1>${visitors}</h1>
-
-<p>Total Visits</p>
-
-</div>
-</section>
-`;
-
-document.body.insertBefore(
-  visitorSection,
-  document.querySelector(".thankyou")
-);
-
-// ===========================
 // SCROLL REVEAL EFFECT
 // ===========================
 
